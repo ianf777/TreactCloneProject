@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,18 +29,56 @@
           </a>
           <div class="nav__links--container">
             <ul class="nav__links">
-              <li class="link__hover nav__link"><a href="">About</a></li>
-              <li class="link__hover nav__link"><a href="">Blog</a></li>
-              <li class="link__hover nav__link"><a href="">Pricing</a></li>
-              <li class="link__hover nav__link"><a href="">Contact Us</a></li>
+              <li class="link__hover nav__link">
+                <a href="#landing">About</a>
+              </li>
+              <li class="link__hover nav__link"><a href="#">Blog</a></li>
+              <li class="link__hover nav__link">
+                <a href="#pricing">Pricing</a>
+              </li>
+              <li class="link__hover nav__link"><a href="#">Contact Us</a></li>
               <div class="nav__links--personal">
-                <li class="link__hover nav__link"><a href="">Login</a></li>
+                <li class="link__hover nav__link"><a href="#">Login</a></li>
                 <li class="link__hover nav__link">
-                  <a href=""
+                  <a href="#"
                     ><button class="button__generic">Sign Up</button></a
                   >
                 </li>
               </div>
+            </ul>
+          </div>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fa-solid fa-bars bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu--close" onclick="closeMenu()">
+              <i class="fa-solid fa-x"></i>
+            </button>
+            <ul class="backdrop__lists">
+              <li class="backdrop__list">
+                <a href="" class="backdrop__link link__hover">About</a>
+              </li>
+              <li class="backdrop__list">
+                <a href="" class="backdrop__link" onclick="closeMenu()">Blog</a>
+              </li>
+              <li class="backdrop__list">
+                <a href="" class="backdrop__link" onclick="closeMenu()"
+                  >Pricing</a
+                >
+              </li>
+              <li class="backdrop__list">
+                <a href="" class="backdrop__link" onclick="closeMenu()"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="backdrop__list">
+                <a href="" class="backdrop__link" onclick="closeMenu()"
+                  >Login</a
+                >
+              </li>
+              <li class="backdrop__list">
+                <button class="backdrop__btn button__generic">Sign Up</button>
+              </li>
             </ul>
           </div>
         </div>
@@ -311,9 +350,7 @@
               <div class="values__points--wrapper">
                 <div class="values__point">
                   <div class="values__point-title--section">
-                    <figure
-                      class="values__point-icon--wrapper1"
-                    >
+                    <figure class="values__point-icon--wrapper1">
                       <i
                         class="fa-solid fa-dollar-sign values__point--img values__point--imgone"
                       ></i>
@@ -327,9 +364,7 @@
                 </div>
                 <div class="values__point">
                   <div class="values__point-title--section">
-                    <figure
-                      class="values__point-icon--wrapper2"
-                    >
+                    <figure class="values__point-icon--wrapper2">
                       <i
                         class="fa-solid fa-briefcase values__point--img values__point--imgtwo"
                       ></i>
@@ -342,7 +377,9 @@
                   </p>
                 </div>
               </div>
-              <button class="values__button no__cursor button__generic">Learn More</button>
+              <button class="values__button no__cursor button__generic">
+                Learn More
+              </button>
             </div>
 
             <figure class="values__img--wrapper">
@@ -352,5 +389,314 @@
         </div>
       </div>
     </section>
+
+    <section class="pricing">
+      <div class="container">
+        <div class="row">
+          <div class="pricing__wrapper">
+            <span class="pricing__subtitle purple">PRICING</span>
+            <h1 class="pricing__title">
+              Reasonable &amp; Flexible <span class="purple">Plans</span>
+            </h1>
+            <p class="pricing__para">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <!--CARDS------------------->
+            <div class="prices__wrapper">
+              <div class="price__personal price__plan">
+                <div
+                  class="price__decoration price__decoration--personal"
+                ></div>
+                <div class="price__top price__top--personal">
+                  <h3 class="price__type">PERSONAL</h3>
+                  <h2 class="price__amount">$17.99</h2>
+                  <span class="price__billing">MONTHLY</span>
+                </div>
+                <div class="price__middle price__middle--personal">
+                  <h4 class="middle__title">For Individuals</h4>
+                  <h4 class="middle__info">30 Templates</h4>
+                  <h4 class="middle__info">7 Landing Pages</h4>
+                  <h4 class="middle__info">12 Internal Pages</h4>
+                  <h4 class="middle__info">Basic Assistance</h4>
+                </div>
+                <div class="price__bottom">
+                  <button class="button__personal button__price button__hover">
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+              <div class="price__business price__plan">
+                <div class="price__top business price__top--business">
+                  <h3 class="price__type white">BUSINESS</h3>
+                  <h2 class="price__amount white">$37.99</h2>
+                  <span class="price__billing price__billing--business"
+                    >MONTHLY</span
+                  >
+                </div>
+                <div class="price__middle business price__middle--business">
+                  <h4 class="middle__title white">For Small Businesses</h4>
+                  <h4 class="middle__info middle__info--business">
+                    60 Templates
+                  </h4>
+                  <h4 class="middle__info middle__info--business">
+                    15 Landing Pages
+                  </h4>
+                  <h4 class="middle__info middle__info--business">
+                    22 Internal Pages
+                  </h4>
+                  <h4 class="middle__info middle__info--business">
+                    Priority Assistance
+                  </h4>
+                </div>
+                <div class="price__bottom business">
+                  <button class="button__business button__price button__hover">
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+              <div class="price__enterprise price__plan">
+                <div
+                  class="price__decoration price__decoration--enterprise"
+                ></div>
+                <div class="price__top price__top--personal">
+                  <h3 class="price__type">ENTERPRISE</h3>
+                  <h2 class="price__amount">$57.99</h2>
+                  <span class="price__billing">MONTHLY</span>
+                </div>
+                <div class="price__middle price__middle--personal">
+                  <h4 class="middle__title">For Individuals</h4>
+                  <h4 class="middle__info">90 Templates</h4>
+                  <h4 class="middle__info">27 Landing Pages</h4>
+                  <h4 class="middle__info">37 Internal Pages</h4>
+                  <h4 class="middle__info">Personal Assistance</h4>
+                </div>
+                <div class="price__bottom">
+                  <button
+                    class="button__enterprise button__price button__hover"
+                  >
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--CARDS END------------------->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="testimonials__wrapper">
+            <figure class="testimonials__img--wrapper">
+              <img src="./assets/love.svg" alt="" class="testimonials__img" />
+            </figure>
+
+            <div class="testimonials__description--wrapper">
+              <div class="testimonials__description--one">
+                <span rgb(74, 85, 104)class="testimonials__subtitle purple"
+                  >TESTIMONIALS</span
+                >
+                <h1 class="testimonials__title">
+                  Our Clients <span class="purple">Love Us.</span>
+                </h1>
+                <p class="testimonials__para--top">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                  enim ad minim veniam.
+                </p>
+                <div class="testimonials__rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h2 class="testimonials__title--two">
+                  Amazing User Experience
+                </h2>
+                <p class="testimonials__para--two">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident, sunt in culpa qui officia.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmond tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minium veniam, quis nostrud exercitation
+                  ullamco.
+                </p>
+              </div>
+              <div class="testimonial__review--wrapper">
+                <div class="testimonial__review--section">
+                  <figure class="testimonial__review-img--wrapper">
+                    <img
+                      src="./assets/photo-1494790108377-be9c29b29330.avif"
+                      alt=""
+                      class="testimonial__review--img"
+                    />
+                  </figure>
+                  <div class="testimonial__review--text">
+                    <h4 class="testimonial__review--name">Charlotte Hale</h4>
+                    <p class="testimonial__review--position">
+                      Director, Delos Inc.
+                    </p>
+                  </div>
+                </div>
+                <div class="review__arrows">
+                  <button class="arrow__wrapper button__generic">
+                    <i class="fa-solid fa-arrow-left arrow"></i>
+                  </button>
+                  <div class="divider"></div>
+                  <button class="arrow__wrapper button__generic">
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="started">
+      <div class="container started__container">
+        <div class="row started__row">
+          <div class="started__wrapper">
+            <div class="started__content">
+              <h1 class="started__title">
+                Developers all over the world are happily using Treact.
+              </h1>
+              <div class="started__buttons">
+                <button class="first__button">Get Started</button>
+                <button class="second__button">Contact Us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer__container">
+        <div class="footer__row">
+          <div class="footer__about">
+            <div class="footer__links--wrapper">
+              <h4 class="link__title">MAIN</h4>
+              <ul class="footer__links--list">
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Blog</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">FAQs</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Support</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">About Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__links--wrapper">
+              <h4 class="link__title">PRODUCT</h4>
+              <ul class="footer__links--list">
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Log In</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Personal</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Business</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Team</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__links--wrapper">
+              <h4 class="link__title">PRESS</h4>
+              <ul class="footer__links--list">
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Logos</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Events</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Stories</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Office</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__links--wrapper">
+              <h4 class="link__title">TEAM</h4>
+              <ul class="footer__links--list">
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Careers</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Founders</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Culture</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Onboarding</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__links--wrapper">
+              <h4 class="link__title">LEGAL</h4>
+              <ul class="footer__links--list">
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">GDPR</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Privacy Policy</a>
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover"
+                    >Terms of Service</a
+                  >
+                </li>
+                <li class="footer__link--list">
+                  <a href="" class="footer__link link__hover">Disclaimer</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__line"></div>
+          <div class="footer__copyright">
+            <div class="copyright__logo-section">
+              <figure class="copyright__logo--wrapper">
+                <img
+                  src="./assets/logolight.svg"
+                  alt=""
+                  class="copyright__logo"
+                />
+              </figure>
+              <h4 class="footer__copyright--title">Treact Inc.</h4>
+            </div>
+            <h3 class="copyright__title">
+              © 2018 Treact Inc. All Rights Reserved.
+            </h3>
+            <div class="copyright__logos">
+              <figure class="copyright__brand--wrapper no__cursor">
+                <i class="fa-brands fa-facebook-f brand__logo"></i>
+              </figure>
+              <figure class="copyright__brand--wrapper no__cursor">
+                <i class="fa-brands fa-twitter brand__logo"></i>
+              </figure>
+              <figure class="copyright__brand--wrapper no__cursor">
+                <i class="fa-brands fa-youtube brand__logo"></i>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
