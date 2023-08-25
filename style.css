@@ -179,8 +179,9 @@ nav {
 }
 
 .header__title {
-  margin-bottom: 32px;
   font-size: 36px;
+  font-weight: 700;
+  line-height: 45px;
 }
 
 .header__para {
@@ -1178,5 +1179,11 @@ header__img--wrapper {
 
   .header__email--box {
     min-width: 420px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .header__title {
+    font-size: 48px;
   }
 }
